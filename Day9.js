@@ -90,8 +90,8 @@ student.forEach(function (el, index, arr) {
 //kuch
 //[1,2,3,4,5] //yes
 let mark1 = [2, 3, 4, 5, 6, 7]
-let ouput=mark1.some(function (el, index, arr) {
-    return el > 6
+let ouput = mark1.some(function (el, index, arr) {
+    return el > 3
 })
 console.log(ouput)
 
