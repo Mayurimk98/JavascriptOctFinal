@@ -1,0 +1,9 @@
+
+DOM ==> document object model
+
+WebPage design
+HTML==> 
+CSS =>
+JAVASCRIPT 
+
+shift+1==> ! ==> enter
