@@ -108,9 +108,10 @@ class Student {
         this.sk = skill
     }
 }
-let raviraj=new Student("raviraj",'dhale',31,45,"python")
+let raviraj = new Student("raviraj", 'dhale', 31, 45, "python")
 console.log(raviraj)
 
-let manjiri=new Student("manjiri","kshatriya",56,89,"math")
+let manjiri = new Student("manjiri", "kshatriya", 56, 89, "math")
 console.log(manjiri)
+
 
