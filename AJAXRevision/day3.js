@@ -108,7 +108,7 @@ function getListUser(pageNumber) {
             return res.json()
         })
         .then(function (res) {
-            return res.data
+            return res.data //[{},{},{}]
         })
 }
 
@@ -119,7 +119,7 @@ function getSingleUser(id) {
             return res.json()
         })
         .then(function (res) {
-            return res.data
+            return res.data //{}
         })
 }
 
@@ -133,23 +133,34 @@ function renderHtml(el) {
 }
 
 //getListUser(2)
-    // .then(function (res) {
-    //     let id = res[3].id
-    //     return getSingleUser(id)
-    // })
-    // .then(function (res) {
-    //     let singleUserInfo=res
-    //     renderHtml(singleUserInfo)
-    // })
+// .then(function (res) {
+//     let id = res[3].id
+//     return getSingleUser(id)
+// })
+// .then(function (res) {
+//     let singleUserInfo=res
+//     renderHtml(singleUserInfo)
+// })
 
-async function Userinfo(){
-    let dataArr=await getListUser(1)
-    let info=await getSingleUser(dataArr[4].id)
-    await renderHtml(info)
+// async function Userinfo(){
+//     let dataArr=await getListUser(1)
+//     let info=await getSingleUser(dataArr[4].id)
+//     renderHtml(info)
+// }
+
+
+// Userinfo()
+
+async function showUserInfo() {
+    let listUser = await getListUser(2)
+    let singleUserObj = await getSingleUser(listUser[3].id)
+    renderHtml(singleUserObj)
 }
+//showUserInfo()
 
-
-Userinfo()
-
+let btn=document.querySelector("button")
+btn.addEventListener('click',function(){
+    showUserInfo()
+})
 
 
